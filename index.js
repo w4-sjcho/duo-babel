@@ -35,7 +35,7 @@ module.exports = plugin;
  */
 
 function plugin(o) {
-  if (!o) o = {};
+  if (!o) o = {onlyLocals: true};
   debug('initialized with options', o);
 
   var extensions = extract(o, 'extensions');
