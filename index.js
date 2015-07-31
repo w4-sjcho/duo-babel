@@ -74,9 +74,7 @@ function plugin(o) {
  */
 
 function* run(duo, file, options, only, ignore) {
-  // TODO(sjcho): Seems like caching isn't working.
-  // var cache = yield duo.getCache();
-  var cache = null;
+  var cache = yield duo.getCache();
   if (!cache) {
     debug('cache not enabled for %s', file.id);
     return compile(duo, file, options, only, ignore);
